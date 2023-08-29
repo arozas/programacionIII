@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="programacionIII" remoteFilesAllowedToDisappearOnAutoupload="false">
+    <serverData>
+      <paths name="programacionIII">
+        <serverdata>
+          <mappings>
+            <mapping deploy="Programacion III" local="$PROJECT_DIR$" web="/Programacion III" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

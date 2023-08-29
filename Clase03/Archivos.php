@@ -17,7 +17,7 @@ echo '
 En PHP, fopen() es una función integrada que se utiliza para abrir un archivo y crear un recurso de archivo. La función acepta dos argumentos obligatorios: el nombre del archivo que se va a abrir y el modo de apertura.
 <br><br>
 Nos permite abrir un archivo de forma local o externa(http:// o ftp://)
-
+<br><br>
  En su sintaxis el primer parámetro define el nombre del archivo a ser abierto, y el segundo especifica el modo en el que archivo será abierto.
 <br><br>
 La función fopen() devuelve un recurso de archivo que se utiliza para realizar operaciones en el archivo abierto. Este recurso es un puntero a un objeto de archivo interno en el sistema operativo y se utiliza para leer, escribir y cerrar el archivo.
@@ -241,6 +241,46 @@ En resumen, la función copy() es una función importante en PHP que se utiliza 
 echo '
 <section>
 <h2>Borrar archivos - unlink()</h2>
+<p>
+En PHP, la función unlink() se utiliza para eliminar un archivo del sistema de archivos. La sintaxis básica de la función es la siguiente:
+<pre>
+<code>
+unlink($filename);
+</code>
+</pre>
+Donde $filename es la ruta del archivo que se desea eliminar.
+<br><br>
+Es importante tener en cuenta que la función unlink() solo puede eliminar archivos y no puede eliminar directorios. Además, la función devuelve true si el archivo se ha eliminado correctamente y false si se produce un error.
+<br><br>
+El siguiente ejemplo muestra cómo utilizar la función unlink() para eliminar un archivo:
+<pre>
+<code>
+if (unlink(/ruta/al/archivo.txt)) {
+    echo "El archivo se eliminó correctamente.";
+} else {
+    echo "No se pudo eliminar el archivo.";
+}
+</code>
+</pre>
+En este ejemplo, se elimina el archivo "archivo.txt" utilizando la función unlink(). Si la función se ejecuta con éxito, se imprime un mensaje de éxito. Si la función falla, se imprime un mensaje de error.
+<br><br>
+También es posible utilizar la función unlink() para eliminar varios archivos en una sola llamada, pasando una matriz de nombres de archivo como argumento:
+<pre>
+<code>
+$archivos_a_eliminar = [/ruta/al/archivo1.txt, /ruta/al/archivo2.txt, /ruta/al/archivo3.txt];
+foreach ($archivos_a_eliminar as $archivo) {
+    if (unlink($archivo)) {
+        echo "El archivo $archivo se eliminó correctamente.";
+    } else {
+        echo "No se pudo eliminar el archivo $archivo.";
+    }
+}
+</code>
+</pre>
+En este ejemplo, se eliminan los archivos "archivo1.txt", "archivo2.txt" y "archivo3.txt" utilizando la función unlink() dentro de un bucle foreach. Si la función se ejecuta con éxito para cada archivo, se imprime un mensaje de éxito. Si la función falla para cualquier archivo, se imprime un mensaje de error para ese archivo en particular.
+<br><br>
+En resumen, la función unlink() es una función importante en PHP que se utiliza para eliminar archivos del sistema de archivos. La función acepta un argumento obligatorio: la ruta del archivo que se desea eliminar. La función es útil cuando se desea eliminar archivos que ya no se necesitan y se utiliza comúnmente en aplicaciones web para eliminar archivos subidos por usuarios después de que ya no sean necesarios.
+</p>
 </section>
 ';
 ?>

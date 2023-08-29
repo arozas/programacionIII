@@ -1,7 +1,7 @@
 <?php
 //Nombre: ALEJANDRO ROZAS
 //División: 3-D
-echo "Aplicación Nº 17 (Auto)";
+echo "Aplicación No 19 (Auto)";
 echo "<br>". "<br>";
 /*
 Realizar una clase llamada “Auto” que posea los siguientes atributos
@@ -30,7 +30,13 @@ Crear un método de clase, llamado “Add” que permita sumar dos objetos “Au
 
 Ejemplo: $importeDouble = Auto::Add($autoUno, $autoDos);
 
-En testGarage.php:
+Crear un método de clase para poder hacer el alta de un Auto, guardando los datos en un archivo autos.csv.
+
+Hacer los métodos necesarios en la clase Auto para poder leer el listado desde el archivo autos.csv
+
+Se deben cargar los datos en un array de autos.
+
+En testAuto.php:
     ● Crear dos objetos “Auto” de la misma marca y distinto color.
     ● Crear dos objetos “Auto” de la misma marca, mismo color y distinto precio.
     ● Crear un objeto “Auto” utilizando la sobrecarga restante.
@@ -38,15 +44,20 @@ En testGarage.php:
     ● Obtener el importe sumado del primer objeto “Auto” más el segundo y mostrar el resultado obtenido.
     ● Comparar el primer “Auto” con el segundo y quinto objeto e informar si son iguales o no.
     ● Utilizar el método de clase “MostrarAuto” para mostrar cada los objetos impares (1, 3, 5)
-
 */
 include_once 'Auto.php';
-$autos = array(
-    new Auto('Toyota', 'Rojo'),
-    new Auto('Chevrolet', 'Negro'),
-    new Auto('Ford', 'Rojo', 50000.0),
-    new Auto('Ford', 'Azul', 60000.0, '2022-01-01'),
-    new Auto('Toyota', 'Azul', 80000.0, '2022-02-01'));
+echo "<br>Se leen los autos desde el achivo.<br>";
+$autos = Auto::LeerAutos();
+if(empty($autos)){
+    echo "<br>No hay autos en el archivo, se dan de alta autos:.<br>";
+    Auto::AltaAuto(new Auto('Toyota', 'Rojo'));
+    Auto::AltaAuto(new Auto('Chevrolet', 'Negro'));
+    Auto::AltaAuto(new Auto('Ford', 'Rojo', 50000.0));
+    Auto::AltaAuto(new Auto('Ford', 'Azul', 60000.0, '2022-01-01'));
+    Auto::AltaAuto(new Auto('Toyota', 'Azul', 80000.0, '2022-02-01'));
+}else{
+    echo "<br>Los autos estan cargados.<br>";
+}
 for ($i=0; $i<sizeof($autos); $i++){
     if($i>1)
         $autos[$i]->AgregarImpuestos(1500);

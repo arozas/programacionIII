@@ -43,7 +43,7 @@ class Auto {
 
     // Método de clase para mostrar todos los atributos de un objeto Auto
     public static function MostrarAuto($auto) {
-        if(is_a($auto,'Auto')) {
+        if(is_a($auto, 'Auto')) {
             if($auto != null){
                 echo "Marca: " . $auto->_marca . "<br>";
                 echo "Color: " . $auto->_color . "<br>";

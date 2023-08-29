@@ -1,15 +1,25 @@
 <?php
-require_once "C:/Users/Alejandro/Documents/UTN/Programacion III/Clase02/ejercicios_clase02/ejercicio17/Auto.php";
+require_once "./Auto.php";
 class Garage
 {
     // Atributos privados de la clase
     private string $_razonSocial;
     private float $_precioPorHora;
-    private array $_autos = [];
+    private array $_autos = array();
 
     public function __construct($_razonSocial, $_precioPorHora = 0){
         $this->_razonSocial=$_razonSocial;
         $this->_precioPorHora=$_precioPorHora;
+    }
+
+
+    public function getAutos(): array
+    {
+        return $this->_autos;
+    }
+    public function setAutos(array $autos)
+    {
+        $this->_autos = $autos;
     }
     public function MostrarGarage():void {
         echo "<br>La razón social es: $this->_razonSocial";
@@ -80,6 +90,44 @@ class Garage
             }
         }else{
             echo "<br>No se puede operar por que no es tipo auto.<br>";
+        }
+    }
+    public static function Alta($garage)
+    {
+        if($garage != null){
+            $archivo = fopen("garages.csv", "a");
+            $archivoAutos = fopen("autos.csv", "a");
+            $guardado = fwrite($archivo, $garage->_razonSocial . "," . $garage->_precioPorHora . "\n");
+            if($guardado != false && !empty($garage->getAutos())){
+                foreach ($garage->getAutos() as $auto)
+                Auto::AltaAuto($auto);
+                echo "Se guardó un Auto en $garage->_razonSocial";
+            }
+            fclose($archivo);
+        }else{
+            echo "No se pudo guardar el archivo.";
+        }
+    }
+
+    public static function Leer()
+    {
+        if(file_exists("garages.csv")){
+            $garages = array();
+            if (($archivo = fopen("garages.csv", "r")) !== false) {
+                while (($datos = fgetcsv($archivo, 1000, ",")) !== false) {
+                    $garage = new Garage($datos[0], $datos[1]);
+                    if(file_exists("autos.csv")){
+                            $garage->setAutos(Auto::LeerAutos());
+                            echo "Se cargaron los en $garage->_razonSocial";
+                        }
+                    array_push($garages, $garage);
+                }
+                fclose($archivo);
+            }
+            return $garages;
+        }else{
+            echo "No hay archivo.";
+            return null;
         }
     }
 }

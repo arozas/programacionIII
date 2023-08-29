@@ -1,0 +1,122 @@
+{
+	"info": {
+		"_postman_id": "058c05a6-f602-4986-b9fb-a14848adfd9c",
+		"name": "CLASE - 03 - EJERCICIO 20 BIS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26594724"
+	},
+	"item": [
+		{
+			"name": "Ejercicio 20 BIS",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "Martín",
+							"type": "text"
+						},
+						{
+							"key": "clave",
+							"value": "123456789",
+							"type": "text"
+						},
+						{
+							"key": "mail",
+							"value": "email@email.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/Programacion%20III/Clase03/ejercicios_clase03/ejercicio21/registro.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Programacion%20III",
+						"Clase03",
+						"ejercicios_clase03",
+						"ejercicio21",
+						"registro.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ejercicio 21",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/Programacion%20III/Clase03/ejercicios_clase03/ejercicio21/listado.php?listado=usuarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Programacion%20III",
+						"Clase03",
+						"ejercicios_clase03",
+						"ejercicio21",
+						"listado.php"
+					],
+					"query": [
+						{
+							"key": "listado",
+							"value": "usuarios"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ejercicio22",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "Eugenio",
+							"type": "text"
+						},
+						{
+							"key": "clave",
+							"value": "123456789",
+							"type": "text"
+						},
+						{
+							"key": "mail",
+							"value": "email@email.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/Programacion%20III/Clase03/ejercicios_clase03/ejercicio22/Login.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Programacion%20III",
+						"Clase03",
+						"ejercicios_clase03",
+						"ejercicio22",
+						"Login.php"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

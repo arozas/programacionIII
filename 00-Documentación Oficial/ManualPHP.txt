@@ -1,0 +1,15 @@
+Documentación útil sobre PHP:
+https://www.php.net/
+https://www.w3schools.com/php/default.asp
+https://www.php-fig.org/psr/psr-1/
+
+Si en la clases se hace referencia a una documentación especial aca se comparte los links.
+
+CLASE 03:
+https://www.php.net/manual/en/function.explode.php
+https://www.php.net/manual/en/function.implode.php
+https://www.php.net/manual/es/function.fgetcsv.php
+https://linuxgx.blogspot.com/2018/09/establecer-permisos-la-carpeta-htdocs.html
+CLASE 04:
+CLASE 05:
+CLASE 01:

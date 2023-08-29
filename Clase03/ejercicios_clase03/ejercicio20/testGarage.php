@@ -1,7 +1,7 @@
 <?php
 //Nombre: ALEJANDRO ROZAS
 //División: 3-D
-echo "Aplicación Nº 18 (Auto - Garage)";
+echo "Aplicación Nº 20 (Auto - Garage)";
 echo "<br>". "<br>";
 /*
     Crear la clase Garage que posea como atributos privados:
@@ -26,25 +26,41 @@ Crear el método de instancia “Remove” para que permita quitar un objeto “
 Ejemplo:
 $miGarage->Remove($autoUno);
 
+Crear un método de clase para poder hacer el alta de un Garage y, guardando los datos en un archivo
+garages.csv.
+Hacer los métodos necesarios en la clase Garage para poder leer el listado desde el archivo
+garage.csv
+Se deben cargar los datos en un array de garage.
+
 En testGarage.php, crear autos y un garage. Probar el buen funcionamiento de todos los métodos
 */
 include_once './Garage.php';
+$garages = array();
+$garages = Garage::Leer();
+if($garages == null){
+    $garages = array(new Garage("Garage sin autos."),
+        new Garage("Garage con autos y precio.", 1500.50));
+    $garages[1]->Add(new Auto('Toyota', 'Rojo'));
+    $garages[1]->Add(new Auto('Chevrolet', 'Negro'));
+    $garages[1]->Add(new Auto('Renault', 'Rojo', 50000.0));
+    $garages[1]->Add(new Auto('Ford', 'Azul', 60000.0, '2022-01-01'));
+    $garages[1]->Add(new Auto('Peugeot', 'Azul', 80000.0, '2022-02-01'));
+    $garages[1]->Add(new Auto('Toyota', 'Rojo'));
+    $garages[1]->MostrarGarage();
+    Garage::Alta($garages[0]);
+    Garage::Alta($garages[1]);
+    echo "<br>Se agregaron autos al garage.<br>";
+    echo "<br>Se dieron de alta nuevos garages.<br>";
 
-$garageUno = new Garage("Garge sin autos.");
-$garageUno->MostrarGarage();
-$garageUno->Remove(new Auto('Toyota', 'Azul', 80000.0, '2022-02-01'));
-$garageUno->Remove(300);
-$garageDos = new Garage("Garge con autos y precio.", 1500.50);
-$garageDos->Add(new Auto('Toyota', 'Rojo'));
-$garageDos->Add(new Auto('Chevrolet', 'Negro'));
-$garageDos->Add(new Auto('Renault', 'Rojo', 50000.0));
-$garageDos->Add(new Auto('Ford', 'Azul', 60000.0, '2022-01-01'));
-$garageDos->Add(new Auto('Peugeot', 'Azul', 80000.0, '2022-02-01'));
-$garageDos->Add(new Auto('Toyota', 'Rojo'));
-$garageDos->MostrarGarage();
-$garageDos->Add(500);
-$garageDos->Remove(new Auto('Toyota', 'Rojo'));
-$garageDos->Remove(new Auto('Toyota', 'Rojo'));
-$garageDos->MostrarGarage();
-
+}else{
+    echo "<br>Se cargaron los garages.<br>";
+}
+$garages[0]->MostrarGarage();
+$garages[0]->Remove(new Auto('Toyota', 'Azul', 80000.0, '2022-02-01'));
+$garages[0]->Remove(300);
+$garages[1]->Add(500);
+$garages[1]->MostrarGarage();
+$garages[1]->Remove(new Auto('Toyota', 'Rojo'));
+$garages[1]->Remove(new Auto('Toyota', 'Rojo'));
+?>
 
