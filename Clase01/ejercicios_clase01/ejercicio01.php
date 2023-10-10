@@ -1,6 +1,6 @@
 <?php
 //Nombre: ALEJANDRO ROZAS
-//División: 3-D
+//División: 3-C
 echo "Aplicación No 1 (Sumar números)";
 echo "<br>". "<br>";
 /*
@@ -26,4 +26,3 @@ echo "<br>";
 echo "El total de la suma de los numeros es: " . $sum . "<br>";
 echo "Se sumaron un total de " . $count . " números." . "<br>";
 echo "<br>". "<br>";
-?>

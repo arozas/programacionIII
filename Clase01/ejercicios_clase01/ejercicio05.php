@@ -1,6 +1,6 @@
 <?php
 //Nombre: ALEJANDRO ROZAS
-//División: 3-D
+//División: 3-C
 echo "Aplicación No 5 (Números en letras)";
 echo "<br>". "<br>";
 /*

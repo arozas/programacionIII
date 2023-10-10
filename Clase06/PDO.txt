@@ -1,0 +1,22 @@
+Introducción a PDO.
+
+* Define una interfaz ligera para acceder a la base de datos en PHP.
+* Proporciona una capa de abstracción de acceso a datos, independientemen de la dase de datos.
+se empleando las mismas funciones para cosultas y obtener datos.
+* PDO esta disponible de forma nativa desde PHP 5.1 y esta disponible como una extensión desde
+PECL para PHP 5.0.
+* requiere las características nuevas de POO del núcleo de PHP 5, por lo que no se ejecutará en
+versiones anteriores.
+
+Cenexiones.
+
+Las conexiones se establecen creando instancias de la clase base PDO.
+
+No importa el controlador que se utilice siempre se usará el nombre de la clase PDO.
+
+El constructor acepta parámetros para especificar el origen de la base de datos (conocido como DSN) y, opcionalmente, el nombre de usuario y la contraseña (si la hubiera).
+
+$conStr = "mysql:host=localhost; dbname=pruebaDB";
+$pdo = new PDO($conStr,$user, $pass);
+
+Si hubieran errores de conexión

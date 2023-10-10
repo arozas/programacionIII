@@ -1,6 +1,6 @@
 <?php
 //Nombre: ALEJANDRO ROZAS
-//División: 3-D
+//División: 3-C
 echo "Aplicación No 3 (Obtener el valor del medio)";
 echo "<br>". "<br>";
 /*

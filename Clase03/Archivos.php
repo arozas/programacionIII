@@ -47,10 +47,10 @@ El modo de apertura especifica el tipo de acceso que se permitirá para el archi
  "w+" (modo de escritura y lectura): Abre el archivo para escribir su contenido con el puntero al inicio. Si el archivo no existe, se crea uno nuevo. Si el archivo ya existe, su contenido anterior se eliminará.
 </li>
 <li>
-"a" (modo de anexar): Abre el archivo para escribir su contenido al final del archivo existente. Si el archivo no existe, se crea uno nuevo.
+"a" (modo de anexar): Abre el archivo para solo escribir su contenido al final del archivo existente. Si el archivo no existe, se crea uno nuevo.
 </li>
 <li>
-"a+" (modo de anexar): Abre el archivo para escribir su contenido al final del archivo existente. Si el archivo no existe, se crea uno nuevo.
+"a+" (modo de anexar): Abre el archivo para lectura y escribir su contenido al final del archivo existente. Si el archivo no existe, se crea uno nuevo.
 </li>
 <li>
 "x" (modo de creación exclusiva): Abre el archivo para escribir su contenido. Si el archivo ya existe, se produce un error.

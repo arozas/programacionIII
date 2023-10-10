@@ -1,6 +1,6 @@
 <?php
 //Nombre: ALEJANDRO ROZAS
-//División: 3-D
+//División: 3-C
 echo "Aplicación Nº 9 (Arrays asociativos)";
 echo "<br> <br>";
 /*

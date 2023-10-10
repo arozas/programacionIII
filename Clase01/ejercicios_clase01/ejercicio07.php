@@ -1,6 +1,6 @@
 <?php
 //Nombre: ALEJANDRO ROZAS
-//División: 3-D
+//División: 3-C
 echo "Aplicación Nº 7 (Mostrar impares)";
 echo "<br>". "<br>";
 /*
@@ -32,3 +32,4 @@ foreach($arrayImpares as $valor)
     echo "<br>El valor en indice [$index] del array es: $valor";
     $index++;
 }
+?>

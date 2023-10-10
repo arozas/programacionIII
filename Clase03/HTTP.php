@@ -121,7 +121,7 @@ Algunas caracteristicas:
 <li>El par de nombres/valores es enviado en la dirección URL (texto claro).</li>
 <li>Las peticiones GET se pueden almacenar en caché.</li>
 <li>Permanecen en el historial del navegador.</li>
-<li>Pueden sel marcadas(book marked).</li>
+<li>Pueden sel marcadas(book marked) agregar en favoritos.</li>
 <li>Nunca debe ser unilizado cuando se trata de datos confidenciales</li>
 <li>Tiene limitaciones de longitud de datos (longitud máxima de 2048 caracteres en la URL).</li>
 </ul>

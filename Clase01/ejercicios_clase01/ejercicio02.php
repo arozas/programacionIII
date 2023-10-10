@@ -1,7 +1,7 @@
 <?php
 
 //Nombre: ALEJANDRO ROZAS
-//División: 3-D
+//División: 3-C
 echo "Aplicación No 2 (Mostrar fecha y estación)";
 echo "<br>". "<br>";
 /*
@@ -26,38 +26,17 @@ switch ($mesActual) {
     case 1:
     case 2:
     case 12:
-        if($diaActual>20)
-        {
-            $estacion = "Verano";
-        }
-        else
-        {
-            $estacion = "Primavera";
-        }
+        $estacion = ($diaActual > 20) ? "Verano" : "Primavera";
         break;
     case 3:
     case 4:
     case 5:
-        if($diaActual>20)
-        {
-            $estacion = "Otoño";
-        }
-        else
-        {
-            $estacion = "Verano";
-        }
+        $estacion = ($diaActual > 20) ? "Otoño" : "Verano";
         break;
     case 6:
     case 7:
     case 8:
-    if($diaActual>20)
-        {
-            $estacion = "Invierno";
-        }
-        else
-        {
-            $estacion = "Otoño";
-        }
+        $estacion = ($diaActual > 20) ? "Invierno" : "Otoño";
         break;
     default:
         $estacion = "Primavera";

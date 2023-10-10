@@ -1,6 +1,6 @@
 <?php
 //Nombre: ALEJANDRO ROZAS
-//División: 3-D
+//División: 3-C
 echo "Aplicación Nº 6 (Carga aleatoria)";
 echo "<br>". "<br>";
 /*
@@ -16,7 +16,7 @@ $array = array(rand(1,10), rand(1,10), rand(1,10), rand(1,10),rand(1,10));
 $promedioElementos = (array_sum($array)/sizeof($array));
 
 //Defino la sentencia de condición con un if.
-if($promedioElementos ==6)
+if($promedioElementos == 6)
 {
     echo "El valor es $promedioElementos";
 }

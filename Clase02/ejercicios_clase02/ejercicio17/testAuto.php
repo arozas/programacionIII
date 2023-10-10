@@ -1,6 +1,6 @@
 <?php
 //Nombre: ALEJANDRO ROZAS
-//División: 3-D
+//División: 3-C
 echo "Aplicación Nº 17 (Auto)";
 echo "<br>". "<br>";
 /*
@@ -41,12 +41,14 @@ En testGarage.php:
 
 */
 include_once 'Auto.php';
+
 $autos = array(
     new Auto('Toyota', 'Rojo'),
     new Auto('Chevrolet', 'Negro'),
     new Auto('Ford', 'Rojo', 50000.0),
     new Auto('Ford', 'Azul', 60000.0, '2022-01-01'),
     new Auto('Toyota', 'Azul', 80000.0, '2022-02-01'));
+
 for ($i=0; $i<sizeof($autos); $i++){
     if($i>1)
         $autos[$i]->AgregarImpuestos(1500);

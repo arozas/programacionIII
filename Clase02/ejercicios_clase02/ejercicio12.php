@@ -1,6 +1,6 @@
 <?php
 //Nombre: ALEJANDRO ROZAS
-//División: 3-D
+//División: 3-C
 echo "Aplicación No 12 (Invertir palabra)";
 echo "<br>". "<br>";
 /*
