@@ -1,6 +1,6 @@
 <?php
 // Definición de la clase Auto
-require "C:/Users/Alejandro/Documents/UTN/Programacion III/Bibliotecas/Validaciones.php";
+require "C:/Users/Alejandro/Documents/UTN/ProgramacionIII/Bibliotecas/Validaciones.php";
 class Auto {
 
     // Atributos privados de la clase

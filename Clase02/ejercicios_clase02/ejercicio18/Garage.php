@@ -1,5 +1,5 @@
 <?php
-require_once "C:/Users/Alejandro/Documents/UTN/Programacion III/Clase02/ejercicios_clase02/ejercicio17/Auto.php";
+require_once "C:/Users/Alejandro/Documents/UTN/ProgramacionIII/Clase02/ejercicios_clase02/ejercicio17/Auto.php";
 class Garage
 {
     // Atributos privados de la clase
